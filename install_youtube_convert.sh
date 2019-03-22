@@ -51,4 +51,4 @@ sudo docker pull mysql:5.7.23
 sudo docker run -d -p3306:3306 --name mysql_youtube \
 --mount type=bind,source=/home/$(whoami)/mysqldata/,target=/var/lib/mysql/ \
 --mount type=bind,source=/home/$(whoami)/logs/mysql_log,target=/var/log/mysql/ \
--e MYSQL_ROOT_PASSWORD=Youtube@2019 -e MYSQL_DATABASE=youtube mysql:5.7.23 --default-time_zone='+8:00'
+-e MYSQL_ROOT_PASSWORD=Youtube@2019 -e MYSQL_DATABASE=youtube mysql:5.7.23 --default-time_zone='-7:00'
