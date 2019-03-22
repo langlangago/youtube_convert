@@ -48,7 +48,7 @@ lxwno1/alpine-apache2-php7:v1 httpd -D FOREGROUND
 sudo docker pull mysql:5.7.23
 
 # run mysql
-sudo docker run -d -p3306:3306 --name mysql_youtube \ 
+sudo docker run -d -p3306:3306 --name mysql_youtube \
 --mount type=bind,source=/home/$(whoami)/mysqldata/,target=/var/lib/mysql/ \
 --mount type=bind,source=/home/$(whoami)/logs/mysql_log,target=/var/log/mysql/ \
--e MYSQL_ROOT_PASSWORD=Youtube@2019 MYSQL_DATABASE=youtube mysql:5.7.23 --default-time_zone='+8:00'
+-e MYSQL_ROOT_PASSWORD=Youtube@2019 -e MYSQL_DATABASE=youtube mysql:5.7.23 --default-time_zone='+8:00'
